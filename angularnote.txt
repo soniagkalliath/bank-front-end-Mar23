@@ -1,0 +1,78 @@
+
+
+
+            Angular - Front End Technology
+        ---------------------------------------
+
+
+        BAsic COmmands
+    -------------------
+
+    1. create project: ng new project-name
+    2. run project: ng s / ng serve
+    3. create component: ng g c component-name
+    4. create Angular Services: ng g s service-folder-name/service-name
+    5. create pipe: ng g p pipe-folder/pipe-name
+
+        Basic Concepts
+    ---------------------
+
+    1. Module: root Module: AppModule
+    2. Component: collection of html,css,ts file. root Component: AppComponent
+    3. Transpiling: conversion ts to js while rendering html 
+    4. Decorator: define meta data, followed with a @ symbol
+    5. Selectors: it will replace html content by its corresponding component html page
+    6. style.css file: to apply style to all html page 
+    7. To set up route for component: 
+        - use Routes array of  RoutingModule file 
+        - use router-outlet selector: to switch views according to the user requested path 
+    8. Data Binding / data sharing within a component
+        - one way Binding
+            - ts (component) file to html (view) file
+                - String Interpolation: {{property-name}}
+                - Property Binding: [attribute-name]="property-name"
+            - html file to ts file
+                - event Binding: (event-name)="function call()"
+                - event Binding using $event as argument: (event-name)="function call($event)"
+                - event Binding using template referencing variable: #variable-name
+        - two way Binding
+            - ngModel: (Template driven Forms)
+                - Import FormsModule in AppModule
+    9. Angular Forms
+            - Template driven Forms:created in html file
+                - Validations
+                    
+            - Model driven forms: created in ts file
+                - Reactive Forms: form group,form array (apply Validations), form control name
+                    - Import ReactiveFormsModule in AppModule
+    10. Dependency Injection: to share data between Dependent classes
+            - access-specifier variable-name:Dependent-class-name in constructor
+    11. Data sharing between components
+            - Angular Services: to share common logic between components
+            - Parent Child Communication
+                - data from parent to child : Input() decorator
+                - data from child to parent: Output() decorator
+    12. Handling Asynchronous Functions in Angular
+        - RxJS library
+            - Observable
+                - subscribe(observer:{
+                    next: callback (success response),
+                    error: callback (client/server error)
+                })
+    13. API Call in Angular
+        - Import HttpClientModule
+            - HttpClient class: define all http methods
+    14. Directives: DOM Manipulation
+        - Component Directives: selector of each component
+        - Attribute Directives: to apply style to DOM Elememnts
+            - ngClass (Built directive)
+            - ngModel 
+            - ngStyle
+        - Structural directive: to add/remove html Elememnts
+            - *ngFor: to duplicate html Elememnts according to an array length
+                - *ngFor="let variable-name of array-name" in html Elememnts that needed to be duplicated
+            - *ngIf: *ngIf="condition" if it true then tag will visible else it removed
+    15. ActivatedRoute: Provides access to information about a route associated with a component
+    16. Pipe: used to transfrom data to another format
+        - built in pipe: {{ value_expression | date [ : 'options' ] }}
+        - user defined pipe: ng g p pipe-name

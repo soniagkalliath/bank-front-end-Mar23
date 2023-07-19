@@ -1,0 +1,30 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- main content -->
+<div class="conatiner m-5">
+    <div class="row align-items-center">
+        <div class="col-lg-4">
+            <img class="img-fluid" src="https://media2.giphy.com/media/iG4zIb2xaxCBbZ3uei/source.gif" alt="landing ">
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5">
+            <h1 class="fw-bolder mb-3">Welcome to  <span class="text-warning">Union Bank</span> </h1>
+            <p style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita esse deleniti quae similique molestias, tempora animi! Ullam in ipsam distinctio excepturi odio nam! Ducimus asperiores sed est officiis vel!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita esse deleniti quae similique molestias, tempora animi! 
+            </p>
+            <div class="collapse" id="collapseExample">
+                <p style="text-align: justify;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita esse deleniti quae similique molestias, tempora animi! Ullam in ipsam distinctio excepturi odio nam! Ducimus asperiores sed est officiis vel!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita esse deleniti quae similique molestias, tempora animi! 
+                </p>
+            </div>
+            <!-- button -->
+            <button (click)="toggle()" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Read <span *ngIf="isReadMore">More</span> <span *ngIf="!isReadMore">Less</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>
